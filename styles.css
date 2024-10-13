@@ -1,0 +1,554 @@
+@charset "UTF-8";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  max-height: 150px;
+  background-image: linear-gradient(
+    to bottom,
+    #ffd1c4,
+    #ffd8d8,
+    #ffe1e8,
+    #fdebf5,
+    #fbf4fc,
+    #fbf4fc,
+    #fbf4fc,
+    #fbf4fc,
+    #fdebf5,
+    #ffe1e8,
+    #ffd8d8,
+    #ffd1c4
+  );
+  z-index: 2;
+}
+
+.quicksand-leipäteksti {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.great-vibes-regular {
+  font-family: "Great Vibes", cursive;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 4em;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  background-image: url(./Images/taustakuva.jpg);
+  box-sizing: border-box;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  top: 90px;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  /*  top: 50px; */
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  font-family: "Quicksand";
+}
+
+h1 {
+  color: #000;
+  font-family: "Great Vibes";
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 60px;
+}
+
+h2 {
+  color: #000;
+  font-family: "Great Vibes";
+  font-size: 1.75em;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+p,
+label {
+  color: #000;
+  font-family: "Quicksand";
+  text-align: center;
+  padding-bottom: 30px;
+  font-size: 1rem;
+}
+
+dt {
+  color: #000;
+  font-family: "Great Vibes";
+  font-size: 2.5em;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+dd {
+  color: #000;
+  font-family: "Quicksand";
+  text-align: center;
+  padding-bottom: 8px;
+  font-size: 1rem;
+}
+
+input[type="submit"] {
+  font-family: "Quicksand";
+  background-color: #ffd1c4;
+  border: 1px;
+  border-style: solid;
+  border-color: #000;
+  border-radius: 8px;
+  color: #000;
+  padding: 6px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+}
+
+input[type="submit"]:hover {
+  background-color: #faa68e;
+  transition: background-color 0.3s;
+}
+
+/* .nav container {
+  height: auto;
+} */
+
+.text__container {
+  position: relative;
+  top: 50px;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-bottom: 10rem;
+}
+
+.container {
+  /* max-width: 1120px; */
+  margin-right: 1rem;
+}
+
+.tekstilinkki {
+  color: #faa68e;
+  text-decoration: underline;
+}
+
+.nav__logo {
+  scale: 70%;
+  align-items: center;
+}
+
+.bannerinkuva {
+  display: block;
+  margin: auto;
+  scale: 80%;
+  align-items: center;
+}
+
+.nav {
+  height: auto;
+}
+
+.nav__logo,
+.nav__burger,
+.nav__close {
+  color: var(--black-color);
+}
+
+.nav__data {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* vertical-align: middle; */
+}
+
+.nav__logo {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.25rem;
+}
+
+.nav__toggle {
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+
+.nav__burger,
+.nav__close {
+  position: absolute;
+  width: max-content;
+  height: max-content;
+  inset: 0;
+  margin: auto;
+  font-size: 1.25rem;
+  cursor: pointer;
+  /*   display: grid;
+  place-items: center; */
+  transition: opacity 0.1s, transform 0.4s;
+}
+
+.nav__close {
+  opacity: 0;
+}
+
+.vinkkilappu {
+  color: #faa68e;
+  text-align: center;
+  font-size: 72px;
+}
+
+.sivukuva {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+.sivukuva img {
+  max-width: 100%;
+  height: auto;
+}
+
+.alabanneri {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  display: table-cell;
+  vertical-align: middle;
+  height: 3rem;
+  background-image: linear-gradient(
+    to bottom,
+    #ffd1c4,
+    #ffd8d8,
+    #ffe1e8,
+    #fdebf5,
+    #fbf4fc,
+    #fbf4fc,
+    #fbf4fc,
+    #fbf4fc,
+    #fdebf5,
+    #ffe1e8,
+    #ffd8d8,
+    #ffd1c4
+  );
+  z-index: var(--z-fixed);
+}
+
+.alabannerinekateksti {
+  text-align: center;
+  vertical-align: middle;
+  padding-bottom: 4px;
+  padding: 0;
+}
+
+.alabannerintokateksti {
+  font-size: smaller;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0;
+}
+
+footer {
+  position: fixed;
+  font-size: smaller;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background-color: #fbf4fc;
+}
+
+.contact__container {
+  position: relative;
+  text-align: center;
+  padding: 0;
+}
+
+@media screen and (max-width: 1118px) {
+  .nav__menu {
+    position: absolute;
+    left: 0;
+    top: 5rem;
+    width: 100%;
+    background-color: #fbf4fc;
+    height: auto;
+    overflow: auto;
+    pointer-events: none;
+    opacity: 0;
+    transition: top 0.4s, opacity 0.3s;
+    z-index: 1001;
+  }
+
+  .nav__menu::-webkit-scrollbar {
+    width: 0;
+  }
+
+  .nav__list {
+    background-color: #fbf4fc;
+    padding-top: 1rem;
+    z-index: 1001;
+  }
+
+  .h1 {
+    font-size: 60px;
+  }
+}
+
+.footerinteksti {
+  padding: 20px;
+}
+
+.nav__link {
+  color: var(--black-color);
+  background-color: #fbf4fc;
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: var(--font-semi-bold);
+  font-style: normal;
+  padding: 1rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s;
+  z-index: 1001;
+}
+
+.nav__link:hover {
+  background-color: #faa68e;
+}
+
+.show-menu {
+  opacity: 1;
+  top: 7rem;
+  pointer-events: initial;
+  z-index: 1003;
+}
+
+.show-icon .nav__burger {
+  opacity: 0;
+  transform: rotate(90deg);
+}
+
+.show-icon .nav__close {
+  opacity: 1;
+  transform: rotate(90deg);
+}
+
+.dropdown__item {
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.dropdown__arrow {
+  font-size: 1.25rem;
+  font-weight: initial;
+  transition: 0.4s;
+}
+
+.dropdown__link {
+  padding: 1.25rem 1.25rem 1.25rem 2.5rem;
+  color: var(--black-color);
+  background-color: #ffd1c4;
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  font-weight: var(--font-semi-bold);
+  transition: background-color 0.3s;
+}
+
+.dropdown__link i {
+  font-size: 1.25rem;
+  font-weight: initial;
+}
+
+.dropdown__link:hover {
+  background-color: #faa68e;
+}
+
+.dropdown__menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+}
+
+.dropdown__item:hover .dropdown__menu {
+  max-height: 1000px;
+  transition: max-height 0.4s ease-in;
+}
+
+.dropdown__item:hover .dropdown__arrow {
+  transform: rotate(180deg);
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    margin-right: 1rem;
+  }
+
+  .nav__link {
+    padding-inline: 1rem;
+  }
+
+  .h1 {
+    font-size: 50px;
+  }
+
+  .vinkkilappu {
+    color: #faa68e;
+    text-align: center;
+    font-size: 45px;
+  }
+
+  .alabanneri {
+    line-height: 0.4rem;
+    padding: 0;
+  }
+
+  .alabannerinekateksti {
+    padding: 0;
+    padding-bottom: 4px;
+  }
+
+  .alabannerintokateksti {
+    padding: 0;
+    text-align: end;
+    display: inline-block;
+  }
+
+  .footerinteksti {
+    padding: 10px;
+  }
+
+  p {
+    color: #000;
+    font-family: "Quicksand";
+    text-align: center;
+    padding-bottom: 20px;
+    /* font-size: smaller; */
+  }
+}
+
+@media screen and (min-width: 1118px) {
+  .container {
+    margin-right: 1rem;
+    height: 120px;
+    padding-right: 5%;
+  }
+
+  .nav__logo {
+    padding-right: 100px;
+  }
+
+  p {
+    color: #000;
+    font-family: "Quicksand";
+    text-align: center;
+    padding-bottom: 30px;
+    font-size: larger;
+  }
+
+  .h1 {
+    font-size: x-large;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav__toggle {
+    display: none;
+  }
+
+  .nav__list {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 3rem;
+    z-index: 1001;
+  }
+
+  .nav__link {
+    height: 100%;
+    background-color: transparent;
+    padding: 0;
+    justify-content: initial;
+    column-gap: 0.25rem;
+  }
+  .nav__link:hover {
+    background-color: transparent;
+  }
+
+  .dropdown__item {
+    position: relative;
+  }
+
+  .dropdown__menu {
+    max-height: initial;
+    /* position: absolute; */
+    /* display: none; */
+    overflow: auto;
+    left: 0;
+    top: 6rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s, top 0.3s;
+    z-index: 1;
+  }
+
+  .dropdown__link {
+    padding-inline: 1rem;
+    overflow: auto;
+    float: none;
+    display: block;
+  }
+
+  .dropdown__item:hover .dropdown__menu {
+    opacity: 1;
+    display: block;
+    top: 5.5rem;
+    pointer-events: initial;
+    transition: top 0.3s;
+  }
+
+  .footerinteksti {
+    padding-top: 10px;
+  }
+
+  .alabannerinekateksti {
+    max-width: 100%;
+    /* font-size: x-small; */
+  }
+
+  .text__container {
+    position: relative;
+    top: 70px;
+    padding-left: 20%;
+    padding-right: 20%;
+    font-size: medium;
+  }
+}
