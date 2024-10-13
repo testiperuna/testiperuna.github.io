@@ -483,13 +483,13 @@ footer {
 
   .alabannerinekateksti {
     padding: 0;
-    padding-bottom: 4px;
+    /* padding-bottom: 4px; */
   }
 
   .alabannerintokateksti {
-    padding: 0;
-    text-align: end;
-    display: inline-block;
+    margin-top: 1rem;
+    text-align: center;
+    /* display: inline-block; */
   }
 
   .footerinteksti {
