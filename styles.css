@@ -253,7 +253,7 @@ input[type="submit"]:hover {
 .sivukuva {
   margin: auto;
   display: block;
-  max-width: 80%;
+  max-width: 100%;
   display: flex;
   justify-content: center;
 }
@@ -294,6 +294,7 @@ input[type="submit"]:hover {
   vertical-align: middle;
   padding-bottom: 4px;
   padding: 0;
+  word-wrap: break-word;
 }
 
 .alabannerintokateksti {
@@ -477,7 +478,7 @@ footer {
   }
 
   .alabanneri {
-    line-height: 0.4rem;
+    /* line-height: 0.4rem; */
     padding: 0;
   }
 
