@@ -256,6 +256,7 @@ input[type="submit"]:hover {
   max-width: 100%;
   display: flex;
   justify-content: center;
+  padding-bottom: 6rem;
 }
 
 .sivukuva img {
