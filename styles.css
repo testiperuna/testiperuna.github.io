@@ -1,5 +1,51 @@
 @charset "UTF-8";
 
+:root {
+  --header-height: 3.5rem;
+
+  /*COLORS*/
+  --dark-color: #faa68e;
+  --dark-color-light: #ffd1c4;
+  --dark-color-lighten: #ffd8d8;
+  --white-color: #fff;
+  --body-color: #fff;
+
+  /*FONT*/
+  --body-font: "Quicksand", sans-serif;
+  --normal-font-size: 0.938rem;
+  --font-regular: 400;
+  --font-semi-bold: 600;
+
+  /*Z-INDEX*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+h1 {
+  color: #000;
+  font-family: "Great Vibes";
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 60px;
+}
+
+h2 {
+  color: #000;
+  font-family: "Great Vibes";
+  font-size: 1.75em;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+/*RESPONSIVE TYPOGRAPHY*/
+@media screen and (min-width: 1024px) {
+  :root {
+    --normal-font-size: rem;
+  }
+}
+
+/* BASE */
+
 * {
   padding: 0;
   margin: 0;
@@ -7,9 +53,10 @@
 }
 
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
   max-height: 150px;
   background-image: linear-gradient(
     to bottom,
@@ -26,7 +73,7 @@ header {
     #ffd8d8,
     #ffd1c4
   );
-  z-index: 2;
+  z-index: var(--z-fixed);
 }
 
 .quicksand-leipäteksti {
@@ -48,16 +95,16 @@ body {
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   background-image: url(./Images/taustakuva.jpg);
-  box-sizing: border-box;
-  width: 100vw;
-  padding: 0;
-  margin: 0;
-  top: 90px;
+  /*   box-sizing: border-box; */
+  /*   width: 100vw; */
+  /*   padding: 0; */
+  /*   margin: 0; */
+  /*   top: 90px; */
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
   /*  top: 50px; */
-  overflow-x: hidden;
+  /*   overflow-x: hidden; */
 }
 
 ul {
@@ -65,25 +112,7 @@ ul {
 }
 
 a {
-  color: #000;
   text-decoration: none;
-  font-family: "Quicksand";
-}
-
-h1 {
-  color: #000;
-  font-family: "Great Vibes";
-  text-align: center;
-  padding: 2rem 0;
-  font-size: 60px;
-}
-
-h2 {
-  color: #000;
-  font-family: "Great Vibes";
-  font-size: 1.75em;
-  text-align: center;
-  padding: 1.5rem;
 }
 
 p,
@@ -143,9 +172,11 @@ input[type="submit"]:hover {
   padding-bottom: 10rem;
 }
 
+/* REUSABLE */
+
 .container {
-  /* max-width: 1120px; */
-  margin-right: 1rem;
+  max-width: 1120px;
+  margin-right: 1.5rem;
 }
 
 .tekstilinkki {
@@ -154,19 +185,19 @@ input[type="submit"]:hover {
 }
 
 .nav__logo {
-  /*   scale: 70%; CSS-fix*/
+  scale: 70%;
   align-items: center;
 }
 
 .bannerinkuva {
   display: block;
-  margin: auto;
-  /*   scale: 80%; CSS-fix*/
+  margin: 0 auto;
+  scale: 70%;
   align-items: center;
 }
 
 .nav {
-  height: auto;
+  height: var(--header-height);
 }
 
 .nav__logo,
@@ -292,15 +323,15 @@ footer {
   .nav__menu {
     position: absolute;
     left: 0;
-    top: 5rem;
+    top: 2.5rem;
     width: 100%;
     background-color: #fbf4fc;
-    height: auto;
+    height: calc(100vh - 3.5rem);
     overflow: auto;
     pointer-events: none;
     opacity: 0;
     transition: top 0.4s, opacity 0.3s;
-    z-index: 1001;
+    /*     z-index: 1001; */
   }
 
   .nav__menu::-webkit-scrollbar {
@@ -308,13 +339,9 @@ footer {
   }
 
   .nav__list {
-    background-color: #fbf4fc;
+    background-color: var(--dark-color-lighten);
     padding-top: 1rem;
-    z-index: 1001;
-  }
-
-  .h1 {
-    font-size: 60px;
+    /*     z-index: 1001; */
   }
 }
 
@@ -324,28 +351,28 @@ footer {
 
 .nav__link {
   color: var(--black-color);
-  background-color: #fbf4fc;
+  background-color: var(--dark-color-lighten);
   font-family: "Quicksand", sans-serif;
   /*   font-optical-sizing: auto; CSS-fix*/
   font-weight: var(--font-semi-bold);
   font-style: normal;
-  padding: 1rem 1rem;
+  padding: 1.25rem 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: background-color 0.3s;
-  z-index: 1001;
+  /*   z-index: 1001; */
 }
 
 .nav__link:hover {
-  background-color: #faa68e;
+  background-color: var(--dark-color);
 }
 
 .show-menu {
   opacity: 1;
-  top: 7rem;
+  top: 3.5rem;
   pointer-events: initial;
-  z-index: 1003;
+  /*   z-index: 1003; */
 }
 
 .show-icon .nav__burger {
@@ -360,19 +387,19 @@ footer {
 
 .dropdown__item {
   cursor: pointer;
-  z-index: 1001;
+  /*   z-index: 1001; */
 }
 
 .dropdown__arrow {
   font-size: 1.25rem;
   font-weight: initial;
-  transition: 0.4s;
+  transition: transform 0.4s;
 }
 
 .dropdown__link {
   padding: 1.25rem 1.25rem 1.25rem 2.5rem;
   color: var(--black-color);
-  background-color: #ffd1c4;
+  background-color: var(--dark-color-light);
   display: flex;
   align-items: center;
   column-gap: 0.5rem;
@@ -386,7 +413,7 @@ footer {
 }
 
 .dropdown__link:hover {
-  background-color: #faa68e;
+  background-color: var(--dark-color);
 }
 
 .dropdown__menu {
@@ -404,19 +431,29 @@ footer {
   transform: rotate(180deg);
 }
 
+/* BREAKPOINTS*/
+
 @media screen and (max-width: 767px) {
   .container {
     margin-right: 1rem;
+  }
+
+  .nav__logo {
+    scale: 40%;
+  }
+
+  .bannerinkuva {
+    scale: 50%;
   }
 
   .nav__link {
     padding-inline: 1rem;
   }
 
-  .h1 {
+  /*   .h1 {
     font-size: 50px;
   }
-
+ */
   .vinkkilappu {
     color: #faa68e;
     text-align: center;
@@ -442,21 +479,11 @@ footer {
   .footerinteksti {
     padding: 10px;
   }
-
-  p {
-    color: #000;
-    font-family: "Quicksand";
-    text-align: center;
-    padding-bottom: 20px;
-    /* font-size: smaller; */
-  }
 }
 
 @media screen and (min-width: 1118px) {
   .container {
-    margin-right: 1rem;
-    height: 120px;
-    padding-right: 5%;
+    margin-inline: auto;
   }
 
   .nav__logo {
@@ -478,6 +505,7 @@ footer {
   .nav {
     display: flex;
     justify-content: space-between;
+    height: calc(var(--header-height) + 2rem);
   }
 
   .nav__toggle {
@@ -487,9 +515,9 @@ footer {
   .nav__list {
     height: 100%;
     display: flex;
-    justify-content: space-between;
+    /*     justify-content: space-between; */
     column-gap: 3rem;
-    z-index: 1001;
+    /*     z-index: 1001; */
   }
 
   .nav__link {
@@ -509,28 +537,28 @@ footer {
 
   .dropdown__menu {
     max-height: initial;
-    /* position: absolute; */
-    /* display: none; */
-    overflow: auto;
+    position: relative;
+    display: none;
+    overflow: initial;
     left: 0;
-    top: 6rem;
+    /* top: 6rem; */
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s, top 0.3s;
-    z-index: 1;
+    /* z-index: 1; */
   }
 
   .dropdown__link {
-    padding-inline: 1rem;
-    overflow: auto;
+    padding-inline: 1rem 3.5rem;
+    /*     overflow: auto;
     float: none;
-    display: block;
+    display: block; */
   }
 
   .dropdown__item:hover .dropdown__menu {
     opacity: 1;
     display: block;
-    top: 5.5rem;
+    /* top: 5.5rem; */
     pointer-events: initial;
     transition: top 0.3s;
   }
