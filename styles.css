@@ -270,7 +270,7 @@ input[type="submit"]:hover {
   width: 100vw;
   display: table-cell;
   vertical-align: middle;
-  height: 3rem;
+  height: 5rem;
   background-image: linear-gradient(
     to bottom,
     #ffd1c4,
@@ -320,13 +320,25 @@ footer {
 }
 
 @media screen and (max-width: 1118px) {
+  .dropdown__arrow {
+    opacity: 0;
+  }
+
+  .nav__logo {
+    scale: 40%;
+  }
+
+  .bannerinkuva {
+    scale: 50%;
+  }
+
   .nav__menu {
     position: absolute;
     left: 0;
     top: 2.5rem;
     width: 100%;
-    background-color: #fbf4fc;
-    height: calc(100vh - 3.5rem);
+    /* background-color: #fbf4fc; */
+    /* height: calc(100vh - 3.5rem); */
     overflow: auto;
     pointer-events: none;
     opacity: 0;
@@ -417,13 +429,13 @@ footer {
 }
 
 .dropdown__menu {
-  max-height: 0;
+  /* max-height: 0; */
   overflow: hidden;
   transition: max-height 0.4s ease-out;
 }
 
 .dropdown__item:hover .dropdown__menu {
-  max-height: 1000px;
+  /* max-height: 1000px; */
   transition: max-height 0.4s ease-in;
 }
 
@@ -434,6 +446,10 @@ footer {
 /* BREAKPOINTS*/
 
 @media screen and (max-width: 767px) {
+  .dropdown__arrow {
+    opacity: 0;
+  }
+
   .container {
     margin-right: 1rem;
   }
